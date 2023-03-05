@@ -14,8 +14,6 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    print("Current device height::${MediaQuery.of(context).size.height.toString()}");
-    print("Current device width::${MediaQuery.of(context).size.width.toString()}");
     return Scaffold(
       body: Column(
         children: [
@@ -27,18 +25,18 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      BigText(text: "India",color: AppColors.mainColor,),
+                      const BigText(text: "India",color: AppColors.mainColor,),
                       Row(
-                        children: [
+                        children: const [
                           SmallText(text: "Hyderabad",color: Colors.black54,),
-                          const Icon(Icons.arrow_drop_down_rounded)
+                          Icon(Icons.arrow_drop_down_rounded)
                         ],
                       ),
                     ],
                   ),
               Center(
                 child: Container(
-                  child: Icon(Icons.search,color: Colors.white,),
+                  child: const Icon(Icons.search,color: Colors.white,),
                   width: 45,
                   height: 45,
                   decoration: BoxDecoration(
